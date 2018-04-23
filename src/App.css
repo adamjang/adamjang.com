@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Settings */
+/*:root {
+  --offset: 1px;
+  --max_width: 100%;
+  --columns: 8;
+  --gutter: 1px;
+  --color: rgba(4, 4, 4, 0.6);
+}*/
+
+/* Helper variables */
+/*:root {
+  --repeating-width: calc(100% / var(--columns));
+  --column-width: calc((100% / var(--columns)) - var(--gutter));
+  --background-width: calc(100% + var(--gutter));
+  --background-columns: repeating-linear-gradient(
+    to right,
+    var(--color),
+    var(--color) var(--column-width),
+    transparent var(--column-width),
+    transparent var(--repeating-width)
+  );
+}*/
+
+/*.app-background--overlay::before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - (2 * var(--offset)));
+  max-width: var(--max_width);
+  min-height: 100vh;
+  content: '';
+  background-image: var(--background-columns);
+  background-size: var(--background-width) 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+*/
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  /*background: #FFF;*/
+  background: #040404;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.app-background {
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*top: 0;*/
+  /*width: 50%;*/
+  z-index: 1;
+
+  -webkit-transition: opacity 1s ease-in;
+     -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+       -o-transition: opacity 1s ease-in;
+          transition: opacity 1s ease-in;
+}
+
+.app-background.is-loaded {
+  opacity: 1;
+}
+
+.app-background,
+.app-background--overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.app-background--overlay {
+  background-color: rgba(4, 4, 4, .8);
+  /*background: rgb(4,4,4);*/
+  /*background: linear-gradient(0deg, rgba(4,4,4,0.8981967787114846) 0%, rgba(4,4,4,0.7973564425770308) 35%, rgba(4,4,4,0.6049194677871149) 100%);*/
+  z-index: 2;
+}
+
+.app-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-content__inner {
+  padding: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 768px;
+  width: 100%;
+}
+
+.app-intro {
+  color: #DEDEDE;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.app-intro--large {
+  font-size: 48px;
+}
+
+.app-social {
+  font-family: "pt-sans";
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+.app-social li {
+  display: inline-block;
+}
+
+.app-social li:after {
+  color: #666;
+  content: "-";
+}
+
+.app-social li:last-child:after {
+  content: "";
+}
+
+.app-social a {
+  color: #666;
+  display: inline-block;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  position: relative;
+  text-decoration: none;
+
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.app-social a:after {
+  background-color: #D3A758;
+  bottom: -5px;
+  content: "";
+  left: 50%;
+  right: 50%;
+  position: absolute;
+  height: 1px;
+
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+
+.app-social a:hover:after {
+  left: 16px;
+  right: 16px;
+}
+
+.app-social a:hover {
+  color: #D3A758;
+}
+
+.app-stats {
+  color: #CECECE;
+  font-family: "pt-sans";
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  text-align: right;
+  z-index: 3;
+}
+
+.app-stats li {
+  display: inline-block;
+  margin-left: 32px;
+  opacity: .3;
+
+  -webkit-transition: opacity .3s ease-in-out;
+     -moz-transition: opacity .3s ease-in-out;
+      -ms-transition: opacity .3s ease-in-out;
+       -o-transition: opacity .3s ease-in-out;
+          transition: opacity .3s ease-in-out;
+}
+
+
+.app-stats li:hover {
+  opacity: .8;
+}
+
+.app-stats__count {
+  font-size: 18px;
+}
+
+.app-stats__title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
