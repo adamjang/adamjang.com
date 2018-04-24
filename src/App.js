@@ -79,19 +79,19 @@ class App extends Component {
             <p className="app-intro">My name is Adam Jang and I am a Front-End Developer based in Toronto, Canada. I am currently looking for new freelance opportunities.</p>
             <ul className="app-social">
               <li>
-                <a href="#">Email</a>
+                <a href="mailto:contact@adamjang.com">Email</a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a href="https://instagram.com/adamjang">Instagram</a>
               </li>
               <li>
-                <a href="#">Twitter</a>
+                <a href="https://twitter.com/adamjang">Twitter</a>
               </li>
               <li>
-                <a href="#">Unsplash</a>
+                <a href="https://unsplash.com/@adamjang">Unsplash</a>
               </li>
               <li>
-                <a href="#">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/adamjang/">LinkedIn</a>
               </li>
             </ul>
           </div>
