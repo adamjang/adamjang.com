@@ -69,8 +69,6 @@ class App extends Component {
       }
     }
 
-    console.log('this.', this.state.stats)
-
     return (
       <div className="app">
         <div className="app-content">
