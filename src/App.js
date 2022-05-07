@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   setBackground(photos = []) {
-    console.log('a', photos)
     if(photos.length > 0) {
       const random = Math.floor(Math.random() * photos.length)
       const photo = photos[random]
