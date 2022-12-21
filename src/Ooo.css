@@ -1,0 +1,14 @@
+.ooo {
+  background: white;
+  height: 100%;
+  width: 100%;
+}
+
+.ooo-content {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.ooo-content img {
+  margin-top: 12px;
+}
