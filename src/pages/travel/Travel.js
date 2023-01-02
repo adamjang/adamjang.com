@@ -13,7 +13,7 @@ function Travel() {
     <div className="relative">
       <Header />
       <div className="mx-auto 2xl:max-w-screen-2xl sm:max-w-screen-xl p-2 md:p-4 relative">
-        <h1 className="text-5xl md:text-7xl font-bold text-center mb-8 font-serif">
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-8 font-serif tracking-wide">
           Travel
         </h1>
         {
@@ -27,7 +27,7 @@ function Travel() {
                       {place.thumbnail && <img className="object-cover" src={place.thumbnail || placeholderImage} />}
                     </div>
                     <div className="absolute bottom-0 p-4 text-white bg-gradient-to-t from-zinc-900 to-transparent w-full">
-                      <h3 className="mt-2 text-xl font-semibold">{place.country}</h3>
+                      <h3 className="mt-2 text-xl font-semibold tracking-wide">{place.country}</h3>
                       <h4 className="text-md">{place.month || 'January'}, {place.year || group.year}</h4>
                     </div>
                   </div>
