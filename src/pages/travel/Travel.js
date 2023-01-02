@@ -5,20 +5,21 @@ import Header from '../../components/Header';
 import locations from './locations'
 
 import placeholderImage from './thumbnails/2022-south-korea.jpg'
+// import map from './mapbox.png'
 
 
 function Travel() {
   return (
-    <div>
+    <div className="relative">
       <Header />
-      <div className="mx-auto 2xl:max-w-screen-2xl sm:max-w-screen-xl bg-white p-2 md:p-4">
-        <h1 className="text-5xl font-bold text-center mb-8 font-serif">
+      <div className="mx-auto 2xl:max-w-screen-2xl sm:max-w-screen-xl p-2 md:p-4 relative">
+        <h1 className="text-5xl md:text-7xl font-bold text-center mb-8 font-serif">
           Travel
         </h1>
         {
           locations.map((group, groupIndex) => (
             <div key={groupIndex.toString()} className="mb-8 md:mb-12">
-              <h2 className="text-3xl font-serif font-semibold mb-4">{group.year}</h2>
+              <h2 className="text-4xl font-serif font-semibold mb-4">{group.year}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8">
                 {group.places && group.places.map((place, placeIndex) => !place.hidden && (
                   <div key={placeIndex.toString()} className="relative">
@@ -26,7 +27,7 @@ function Travel() {
                       {place.thumbnail && <img className="object-cover" src={place.thumbnail || placeholderImage} />}
                     </div>
                     <div className="absolute bottom-0 p-4 text-white bg-gradient-to-t from-zinc-900 to-transparent w-full">
-                      <h3 className="mt-2 text-xl">{place.country}</h3>
+                      <h3 className="mt-2 text-xl font-semibold">{place.country}</h3>
                       <h4 className="text-md">{place.month || 'January'}, {place.year || group.year}</h4>
                     </div>
                   </div>
