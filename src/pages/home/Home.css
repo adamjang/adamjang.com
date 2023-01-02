@@ -49,34 +49,19 @@ body,
   width: 100%;
 }
 
-html {
+.app {
   /*background: #FFF;*/
   background: #040404;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .app-background {
@@ -90,10 +75,10 @@ html {
   z-index: 1;
 
   -webkit-transition: opacity 1s ease-in;
-     -moz-transition: opacity 1s ease-in;
-      -ms-transition: opacity 1s ease-in;
-       -o-transition: opacity 1s ease-in;
-          transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .app-background.is-loaded {
@@ -136,6 +121,7 @@ html {
 
 .app-intro {
   color: #DEDEDE;
+  font-family: 'adobe-garamond-pro', serif;
   font-size: 28px;
   font-weight: 100;
   line-height: 1.5;
@@ -179,10 +165,10 @@ html {
   text-decoration: none;
 
   -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .app-social a:after {
@@ -195,10 +181,10 @@ html {
   height: 1px;
 
   -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 
@@ -230,10 +216,10 @@ html {
   opacity: .3;
 
   -webkit-transition: opacity .3s ease-in-out;
-     -moz-transition: opacity .3s ease-in-out;
-      -ms-transition: opacity .3s ease-in-out;
-       -o-transition: opacity .3s ease-in-out;
-          transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 

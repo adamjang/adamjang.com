@@ -2,7 +2,7 @@
 import React from 'react';
 
 import './Ooo.css'
-import Adam from './img/adam-ooo.png'
+import Adam from '../../img/adam-ooo.png'
 
 function Ooo () {
   return (
